@@ -57,6 +57,10 @@ main{
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+    transition: 0.4s;
+}
+.img-container:hover{
+    box-shadow: 0 0 30px 1px hsl(150, 100%, 66%);
 }
 .dice{
     rotate: 0;
