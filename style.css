@@ -17,7 +17,7 @@ main{
 }
 .attribution{
     position: absolute;
-    bottom: 10vh;
+    bottom: 2vh;
 }
 .advice-card{
     background-color: hsl(217, 19%, 24%);
@@ -61,7 +61,4 @@ main{
 .dice{
     rotate: 0;
     transition: rotate 400ms;
-}
-.img-container:hover ~ .dice{
-    rotate: 45deg;
 }
