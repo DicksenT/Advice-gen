@@ -1,3 +1,5 @@
+const tipNum = document.querySelector(".num");
+const quote = document.querySelector(".adv-text");
 async function advice() {
   try {
     const response = await fetch("https://api.adviceslip.com/advice");
@@ -5,9 +7,15 @@ async function advice() {
       console.log(response.status);
     }
     const result = await response.json();
-    console.log(result.slip);
+    tipNum.innerText = `#${result.slip.id}`;
+    quote.innerText = `"${result.slip.advice}"`;
   } catch (error) {
     console.error(error);
   }
 }
 advice();
+
+const generate = document.querySelector(".img-container");
+generate.addEventListener("click", function () {
+  advice();
+});
